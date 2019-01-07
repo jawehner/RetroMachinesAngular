@@ -12,6 +12,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { ProductsService } from './service/products.service';
+import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AuthService } from './services/auth.service';
@@ -24,6 +26,7 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ProductIndexComponent
     RegistrationComponent,
     HeaderComponent
   ],
@@ -40,7 +43,8 @@ const routes = [
     MatInputModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
