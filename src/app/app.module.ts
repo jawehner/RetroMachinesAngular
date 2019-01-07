@@ -26,7 +26,7 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ProductIndexComponent
+    ProductIndexComponent,
     RegistrationComponent,
     HeaderComponent
   ],
