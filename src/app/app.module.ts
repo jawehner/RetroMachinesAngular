@@ -20,7 +20,8 @@ import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes = [
-  { path: 'register', component: RegistrationComponent}
+  { path: 'register', component: RegistrationComponent},
+  { path: 'Products', component: ProductIndexComponent}
 ];
 
 @NgModule({
