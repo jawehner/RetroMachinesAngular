@@ -1,6 +1,6 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -26,10 +26,10 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
-  // onSubmit() {
-  //   console.log(this._registerForm.value);
-  //   this._authService
-  //   .register(this._registerForm.value)
-  //   .subscribe( () => this._authService.login(this._registerForm.value));
-  // }
+  onSubmit() {
+    console.log(this._registerForm.value);
+    this._authService
+    .register(this._registerForm.value)
+    .subscribe( () => this._authService.login(this._registerForm.value));
+  }
 }
