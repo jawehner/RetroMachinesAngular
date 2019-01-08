@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
-         MatInputModule
+         MatInputModule,
+         MatTableModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -20,7 +21,8 @@ import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes = [
-  { path: 'register', component: RegistrationComponent}
+  { path: 'register', component: RegistrationComponent},
+  { path: 'Products', component: ProductIndexComponent}
 ];
 
 @NgModule({
@@ -40,7 +42,8 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [
     AuthService,
