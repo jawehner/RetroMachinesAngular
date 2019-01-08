@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
-         MatInputModule
+         MatInputModule,
+         MatTableModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -41,7 +42,8 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [
     AuthService,
