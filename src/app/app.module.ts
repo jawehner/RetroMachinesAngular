@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
-         MatInputModule
+         MatInputModule,
+         MatTableModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,6 +25,7 @@ const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', component: RegistrationComponent }
+  { path: 'Products', component: ProductIndexComponent}
 ];
 
 @NgModule({
@@ -44,7 +46,8 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [
     AuthService,
