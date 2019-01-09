@@ -12,13 +12,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { ProductsService } from './service/products.service';
+import { ProductsService } from './services/products.service';
 import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
+import { WishlistCreateComponent } from './components/wishlist/wishlist-create/wishlist-create.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
     ProductIndexComponent,
     RegistrationComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    WishlistCreateComponent
   ],
   imports: [
     BrowserModule,
