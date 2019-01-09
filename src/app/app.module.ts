@@ -20,21 +20,27 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: RegistrationComponent }
-  { path: 'Products', component: ProductIndexComponent}
-];
-
+  { path: '**', component: RegistrationComponent },
+  {
+    path: 'products', children: [
+      {path: '', component: ProductIndexComponent},
+      {path: 'create', component: ProductCreateComponent}
+    ]
+  },
+  ];
 @NgModule({
   declarations: [
     AppComponent,
     ProductIndexComponent,
     RegistrationComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
