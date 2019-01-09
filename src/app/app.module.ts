@@ -21,11 +21,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: RegistrationComponent },
   {
     path: 'products', children: [
       {path: '', component: ProductIndexComponent},
@@ -40,7 +40,8 @@ const routes = [
     RegistrationComponent,
     HeaderComponent,
     LoginComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

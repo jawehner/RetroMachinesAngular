@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Product } from '../models/Product';
 
-const ApiUrl = 'https://localhost:44311/api';
+const ApiUrl = 'https://localhost:44311';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +22,8 @@ export class ProductsService {
   createProduct(product: Product) {
     return this._http.post(`${ApiUrl}/Products`, product, { headers: this.getHeaders()});
   }
+
+  // getProduct(id: string) {
+  //   return this._http.get(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
+  // }
 }
