@@ -1,8 +1,11 @@
 <app-header></app-header>
 <div style="text-align:center">
+<router-outlet></router-outlet>
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <nav>
+      <a routerLink="products">View All Machines</a>
+  </nav>
   <img width="300" alt="Angular Logo" src="../assets/arcade-32783_960_720.png">
 </div>
-<router-outlet></router-outlet>

@@ -7,8 +7,7 @@ import { ProductIndexComponent } from './components/product/product-index/produc
 const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: RegistrationComponent },
-  { path: 'Products', component: ProductIndexComponent}
+  { path: 'products', component: ProductIndexComponent}
 ];
 
 
