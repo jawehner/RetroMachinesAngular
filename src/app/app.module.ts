@@ -12,6 +12,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 import { ProductsService } from './services/products.service';
 import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -19,7 +20,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
-import { WishlistCreateComponent } from './components/wishlist/wishlist-create/wishlist-create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { WishlistCreateComponent } from './components/wishlist/wishlist-create/w
     RegistrationComponent,
     HeaderComponent,
     LoginComponent,
-    WishlistCreateComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +45,7 @@ import { WishlistCreateComponent } from './components/wishlist/wishlist-create/w
   ],
   providers: [
     AuthService,
-    ProductsService
+    ProductsService,
   ],
   bootstrap: [AppComponent]
 })
