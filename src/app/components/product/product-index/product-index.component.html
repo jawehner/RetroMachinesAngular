@@ -1,3 +1,26 @@
-<p>
-  product-index works!
-</p>
+<h1>Index</h1>
+<a mat-raised-button color="primary" routerLink="/products/Create">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+  <ng-container matColumnDef="Name">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Name</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.Name}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Type">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.Type}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Condition">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let product">{{product.Condition}}</mat-cell>
+    </ng-container>
+  <ng-container matColumnDef="Year">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let product">{{product.Year}}</mat-cell>
+    </ng-container>
+  </mat-table>
+</div>
