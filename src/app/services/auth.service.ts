@@ -37,7 +37,6 @@ export class AuthService {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
-
     return this._http.post(`${Api_Url}/api/Account/Logout`, {headers: this.setHeader() });
   }
 
