@@ -26,4 +26,4 @@ export class ProductsService {
 //   getProduct(id: string) {
 //     return this._http.get(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
 //   }
-// }
+ }
