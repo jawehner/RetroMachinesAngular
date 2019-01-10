@@ -23,7 +23,11 @@ export class ProductsService {
     return this._http.post(`${ApiUrl}/Products`, product, { headers: this.getHeaders()});
   }
 
-//   getProduct(id: string) {
-//     return this._http.get(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
-//   }
+  getProduct(id: string) {
+    return this._http.get(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
+  }
+
+  updateProduct(product: Product) {
+    return this._http.put(`${ApiUrl}/Products`, product, { headers: this.getHeaders() });
+  }
  }

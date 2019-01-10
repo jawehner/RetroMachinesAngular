@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService} from '../../../service/products.service';
+import { ProductsService} from '../../../services/products.service';
 import { FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import { Router} from '@angular/router';
 

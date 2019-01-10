@@ -1,5 +1,5 @@
 <h1>Index</h1>
-<a mat-raised-button color="primary" routerLink="/products/Create">Create New</a>
+<a mat-raised-button color="primary" routerLink="create">Create New</a>
 <hr>
 
 <div>
@@ -8,18 +8,20 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
   <ng-container matColumnDef="Name">
     <mat-header-cell *matHeaderCellDef class="matColumnSize">Name</mat-header-cell>
-    <mat-cell *matCellDef="let product">{{product.Name}} </mat-cell>
+    <mat-cell *matCellDef="let product" routerLink="/Products/detail/"{{product.Name}}>
+    <i class="material-icons">library_books</i>
+  </mat-cell>
   </ng-container>
   <ng-container matColumnDef="Type">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+    <mat-header-cell *matHeaderCellDef class="matColumnSize">Type</mat-header-cell>
     <mat-cell *matCellDef="let product">{{product.Type}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="Condition">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Condition</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.Condition}}</mat-cell>
     </ng-container>
   <ng-container matColumnDef="Year">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Year</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.Year}}</mat-cell>
     </ng-container>
   </mat-table>
