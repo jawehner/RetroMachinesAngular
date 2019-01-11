@@ -38,7 +38,7 @@ import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishl
     ProductDetailComponent,
     HomeComponent,
     ProductEditComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
     WishlistDetailComponent,
     WishlistEditComponent
   ],
