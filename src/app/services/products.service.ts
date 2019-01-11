@@ -10,6 +10,7 @@ export class ProductsService {
 
   constructor(private _http: HttpClient) { }
 
+  // take out /ai/ ??
   getProducts() {
     return this._http.get(`${Api_Url}/api/Products`, { headers: this.getHeaders() });
   }
@@ -22,6 +23,7 @@ export class ProductsService {
     return this._http.post(`${Api_Url}/Products`, product, { headers: this.getHeaders()});
   }
 
+  // id string? or product id?
   getProduct(id: string) {
     return this._http.get(`${Api_Url}/Products/${id}`, {headers: this.getHeaders() });
   }
