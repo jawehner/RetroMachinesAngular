@@ -1,0 +1,13 @@
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this product?</h4>
+
+<hr>
+<div *ngIf="Name">
+    <div>
+      <label for="">Name:</label>
+      <span>{{product.Name}}</span>
+    </div>
+  </div>
+  
+  <button mat-button color="accent">Delete</button>
+  <button mat-button color="primary" routerLink="/products">Back to List</button>

@@ -6,6 +6,7 @@ import { ProductIndexComponent } from './components/product/product-index/produc
 import { HomeComponent } from './components/home/home.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'products', children: [
     {path: '', component: ProductIndexComponent},
     {path: 'create', component: ProductCreateComponent},
-    {path: 'name/:id', component: ProductDetailComponent}
+    {path: 'name/:id', component: ProductDetailComponent},
+    {path: 'delete/:id', component: ProductDeleteComponent}
   ]}
 ];
 

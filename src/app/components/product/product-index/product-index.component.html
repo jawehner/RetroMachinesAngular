@@ -24,5 +24,13 @@
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Year</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.Year}}</mat-cell>
     </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        <i mat-icon class="material-icons" routerLink="/Products/edit/{{product.Name}}">edit</i>
+        <i class="material-icons" routerLink="/Products/delete/{{product.Name}}">delete</i>
+      </mat-cell>
+    </ng-container>
   </mat-table>
 </div>

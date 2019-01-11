@@ -30,4 +30,8 @@ export class ProductsService {
   updateProduct(product: Product) {
     return this._http.put(`${ApiUrl}/Products`, product, { headers: this.getHeaders() });
   }
+
+  deleteProduct(id: string) {
+    return this._http.delete(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
+  }
  }
