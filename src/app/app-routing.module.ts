@@ -4,13 +4,17 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { LoginComponent } from './components/login/login.component';
 import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'products', component: ProductIndexComponent}
+  { path: 'products', children: [
+    { path: '', component: ProductIndexComponent},
+    { path: 'create', component: ProductCreateComponent}
+  ]},
 ];
 
 @NgModule({
