@@ -22,6 +22,8 @@ import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
@@ -35,6 +37,8 @@ import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishl
     ProductCreateComponent,
     ProductDetailComponent,
     HomeComponent,
+    ProductEditComponent,
+    ProductDeleteComponent
     WishlistDetailComponent,
     WishlistEditComponent
   ],

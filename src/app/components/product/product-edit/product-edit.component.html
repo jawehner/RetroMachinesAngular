@@ -1,0 +1,24 @@
+<h1>Edit a Product</h1>
+<hr>
+
+<div *ngIf="Product">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editProductForm">
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="Name" type="Name" required [value]="Product.Name" />
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="Type" formControlName="Type" type="Type" required[value]="Product.type" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Condition" formControlName="Condition" type="Condition" required[value]="Product.Condition" />
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Year" formControlName="Year" type="Year" required[value]="Product.Year" />
+        </mat-form-field>
+        <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+  </form>
+</div>
+
+<a mat-button routerLink="/products">Back to List</a>

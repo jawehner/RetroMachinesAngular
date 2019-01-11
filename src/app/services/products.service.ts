@@ -22,7 +22,16 @@ export class ProductsService {
     return this._http.post(`${Api_Url}/Products`, product, { headers: this.getHeaders()});
   }
 
-//   getProduct(id: string) {
-//     return this._http.get(`${Api_Url}/Products/${id}`, {headers: this.getHeaders() });
-//   }
+  getProduct(id: string) {
+    return this._http.get(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
+  }
+
+  updateProduct(product: Product) {
+    return this._http.put(`${ApiUrl}/Products`, product, { headers: this.getHeaders() });
+  }
+
+  deleteProduct(id: string) {
+    return this._http.delete(`${ApiUrl}/Products/${id}`, {headers: this.getHeaders() });
+  }
+
  }
