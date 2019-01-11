@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   login(loginInfo) {
-    return this._http.post(`${Api_Url}/Login`, loginInfo).subscribe( (token: any) => {
+    return this._http.post(`${Api_Url}/Auth/Login`, loginInfo).subscribe( (token: any) => {
       console.log(token);
       localStorage.setItem('id_token',token.token);
     });

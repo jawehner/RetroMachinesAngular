@@ -11,7 +11,7 @@ export class ProductsService {
   constructor(private _http: HttpClient) { }
 
   getProducts() {
-    return this._http.get(`${Api_Url}/api/Products`, { headers: this.getHeaders() });
+    return this._http.get(`${Api_Url}/Product`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
@@ -19,19 +19,19 @@ export class ProductsService {
   }
   
   createProduct(product: Product) {
-    return this._http.post(`${Api_Url}/Products`, product, { headers: this.getHeaders()});
+    return this._http.post(`${Api_Url}/Product`, product, { headers: this.getHeaders()});
   }
 
   getProduct(id: string) {
-    return this._http.get(`${Api_Url}/Products/${id}`, {headers: this.getHeaders() });
+    return this._http.get(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
   updateProduct(product: Product) {
-    return this._http.put(`${Api_Url}/Products`, product, { headers: this.getHeaders() });
+    return this._http.put(`${Api_Url}/Product`, product, { headers: this.getHeaders() });
   }
 
   deleteProduct(id: string) {
-    return this._http.delete(`${Api_Url}/Products/${id}`, {headers: this.getHeaders() });
+    return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
  }
