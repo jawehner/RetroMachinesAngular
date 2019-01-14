@@ -35,7 +35,7 @@ export class ProductEditComponent implements OnInit {
       ProductName: new FormControl(this.product.Name),
       Type: new FormControl(this.product.Type),
       Condition: new FormControl(this.product.Condition),
-      Year: new FormControl(this.product.Year)
+      Year: new FormControl(this.product.Year),
     });
   }
 
@@ -45,7 +45,7 @@ export class ProductEditComponent implements OnInit {
       Name: form.value.Name,
       Type: form.value.Type,
       Condition: form.value.Condition,
-      Year: form.value.Year
+      Year: form.value.Year,
     };
     this._productService.updateProduct(updateProduct).subscribe(d => {
       this._router.navigate(['/products']);
