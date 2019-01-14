@@ -29,8 +29,10 @@ export class ProductCreateComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.productForm.value)
     this._productService.createProduct(this.productForm.value).subscribe(data => {
-      this._router.navigate(['/Products']);
+      console.log(data)
+      this._router.navigate(['/products']);
     })
   }
 }
