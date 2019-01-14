@@ -9,6 +9,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path: 'delete/:id', component: ProductDeleteComponent},
     {path: 'edit/:id', component: ProductEditComponent}
   ]},
+  { path: 'user', component: UserComponent},
   { path: 'wishlist', children: [
     {path: '', component: WishlistDetailComponent},
   ]},
