@@ -56,7 +56,7 @@ import { AuthGuard } from './guards/auth.guard';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     AuthService,
