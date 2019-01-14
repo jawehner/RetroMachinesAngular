@@ -1,4 +1,5 @@
 export interface Product {
+    ProductId?: number;
     UserId: number;
     Name: string;
     Type: string;

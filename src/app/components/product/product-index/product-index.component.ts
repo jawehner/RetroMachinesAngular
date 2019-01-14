@@ -20,5 +20,4 @@ export class ProductIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Product>(products);
     })
   }
-
 }
