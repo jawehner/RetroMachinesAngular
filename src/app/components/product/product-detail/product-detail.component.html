@@ -2,30 +2,30 @@
 
 <hr>
 <div *ngIf="product">
-  <div>
+  <!-- <div>
     <label for="">productId</label>
     <span>{{product.productId}}</span>
-  </div>
+  </div> -->
   <div>
     <label for="">name:</label>
     <span>{{product.name}}</span>
   </div>
-</div>
-<div>
-  <label for="">Type:</label>
-  <span>{{product.type}}</span>
-</div>
-<div>
-  <label for="">Condition:</label>
-  <span>{{product.condition}}</span>
-</div>
-<div>
-  <label for="">Year:</label>
-  <span>{{product.year}}</span>
+  <div>
+    <label for="">Type:</label>
+    <span>{{product.type}}</span>
+  </div>
+  <div>
+    <label for="">Condition:</label>
+    <span>{{product.condition}}</span>
+  </div>
+  <div>
+    <label for="">Year:</label>
+    <span>{{product.year}}</span>
+  </div>
 </div>
 
 
-<button mat-button color="accent" routerLink="/products/edit/{{product.productEntityId}}">Edit</button>
 <!-- need to place FormSpree link below  -->
 <button mat-button color="primary" href="">Contact Seller</button>
 <button mat-button color="primary" routerLink="/products">Back to List</button>
+<button *ngIf="product" mat-button color="accent" routerLink="/products/edit/{{product.productEntityId}}">Edit</button>
