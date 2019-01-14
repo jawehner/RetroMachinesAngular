@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path: '', component: ProductIndexComponent},
     {path: 'create', component: ProductCreateComponent},
     {path: 'name/:id', component: ProductDetailComponent},
-    {path: 'delete/:id', component: ProductDeleteComponent}
+    {path: 'delete/:id', component: ProductDeleteComponent},
+    {path: 'edit/:id', component: ProductEditComponent}
   ]},
   { path: 'wishlist', children: [
     {path: '', component: WishlistDetailComponent},
