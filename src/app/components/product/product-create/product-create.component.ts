@@ -24,7 +24,7 @@ export class ProductCreateComponent implements OnInit {
       Name: new FormControl,
       Type: new FormControl,
       Condition: new FormControl,
-      Year: new FormControl
+      Year: new FormControl,
     })
   }
 
@@ -35,5 +35,4 @@ export class ProductCreateComponent implements OnInit {
       this._router.navigate(['/products']);
     })
   }
-
 }

@@ -40,7 +40,8 @@ import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/w
     ProductEditComponent,
     ProductDeleteComponent,
     WishlistDetailComponent,
-    // WishlistEditComponent,
+    WishlistEditComponent,
+
   ],
   imports: [
     BrowserModule,

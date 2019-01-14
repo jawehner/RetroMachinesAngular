@@ -25,6 +25,7 @@ export class ProductsService {
 
   // id string? or product id?
   getProduct(id: string) {
+
     return this._http.get(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
@@ -34,7 +35,6 @@ export class ProductsService {
 
   deleteProduct(id: string) {
     return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
-
   }
 
  }
