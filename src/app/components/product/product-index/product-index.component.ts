@@ -21,5 +21,4 @@ export class ProductIndexComponent implements OnInit {
       console.log(this.dataSource)
     })
   }
-
 }
