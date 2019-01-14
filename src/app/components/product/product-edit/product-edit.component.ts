@@ -32,6 +32,7 @@ export class ProductEditComponent implements OnInit {
 
   createForm() {
     this.editProductForm = this._form.group({
+      ProductId: new FormControl(this.product.ProductId),
       ProductName: new FormControl(this.product.Name),
       Type: new FormControl(this.product.Type),
       Condition: new FormControl(this.product.Condition),
@@ -41,6 +42,7 @@ export class ProductEditComponent implements OnInit {
 
   onSubmit(form) {
     const updateProduct: Product = {
+      ProductId: form.value.ProductId,
       UserId: form.value.UserId,
       Name: form.value.Name,
       Type: form.value.Type,
