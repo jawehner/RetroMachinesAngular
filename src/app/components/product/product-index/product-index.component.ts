@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material';
 })
 
 export class ProductIndexComponent implements OnInit {
-  columnNames= ['Name', 'Type', 'Condition', 'Year'];
+  columnNames= ['Name', 'Type', 'Condition', 'Year', 'Actions'];
   dataSource: MatTableDataSource<Product>
 
   constructor(private _productService: ProductsService) { }
@@ -20,5 +20,6 @@ export class ProductIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Product>(products);
       console.log(this.dataSource)
     })
+    
   }
 }

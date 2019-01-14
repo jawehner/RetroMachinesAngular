@@ -9,13 +9,14 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'products', children: [
+  { path: 'products', canActivate: [AuthGuard] , children: [
     {path: '', component: ProductIndexComponent},
     {path: 'create', component: ProductCreateComponent},
     {path: 'name/:id', component: ProductDetailComponent},
