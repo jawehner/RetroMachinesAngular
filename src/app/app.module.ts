@@ -25,6 +25,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { UserComponent } from './components/user/user.component';
 // import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
 @NgModule({
@@ -40,6 +41,8 @@ import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/w
     ProductEditComponent,
     ProductDeleteComponent,
     WishlistDetailComponent,
+    UserComponent,
+
     // WishlistEditComponent,
 
   ],
