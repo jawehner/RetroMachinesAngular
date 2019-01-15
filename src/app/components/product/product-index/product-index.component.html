@@ -46,5 +46,17 @@
       <mat-cell *matCellDef="let product" routerLink="/products/name/{{product.productEntityId}}">
       <i class="material-icons">library_books</i></mat-cell>
     </ng-container>
+
+    <ng-container matColumnDef='edit'>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let product" routerLink="/products/edit/{{product.productEntityId}}">
+      <i class="material-icons">edit</i></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='delete'>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let product" routerLink="/products/delete/{{product.productEntityId}}">
+      <i class="material-icons">delete</i></mat-cell>
+    </ng-container>
   </mat-table>
 </div>
