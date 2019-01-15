@@ -25,6 +25,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './components/user/user.component';
 // import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
@@ -42,7 +43,6 @@ import { UserComponent } from './components/user/user.component';
     ProductDeleteComponent,
     WishlistDetailComponent,
     UserComponent,
-
     // WishlistEditComponent,
 
   ],
@@ -57,11 +57,12 @@ import { UserComponent } from './components/user/user.component';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     AuthService,
     ProductsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
