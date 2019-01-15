@@ -26,7 +26,8 @@ import { ProductEditComponent } from './components/product/product-edit/product-
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { AuthGuard } from './guards/auth.guard';
-//import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
+import { UserComponent } from './components/user/user.component';
+// import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { AuthGuard } from './guards/auth.guard';
     ProductEditComponent,
     ProductDeleteComponent,
     WishlistDetailComponent,
-    
+    UserComponent,
     // WishlistEditComponent,
 
   ],

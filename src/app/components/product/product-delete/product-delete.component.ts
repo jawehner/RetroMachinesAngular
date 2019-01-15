@@ -22,7 +22,7 @@ export class ProductDeleteComponent implements OnInit {
     }
     
     onDelete() {
-      this._productService.deleteProduct(this.product.Name).subscribe(() => {
+      this._productService.deleteProduct(this.product.name).subscribe(() => {
         this._router.navigate(['/products']);
       })
     }

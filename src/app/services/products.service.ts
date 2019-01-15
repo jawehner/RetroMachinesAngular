@@ -25,12 +25,11 @@ export class ProductsService {
 
   // id string? or product id?
   getProduct(id: string) {
-
     return this._http.get(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
   updateProduct(product: Product) {
-    return this._http.put(`${Api_Url}/Product`, product, { headers: this.getHeaders() });
+    return this._http.put(`${Api_Url}/Product/${product.productEntityId}`, product, { headers: this.getHeaders() });
   }
 
   deleteProduct(id: string) {
