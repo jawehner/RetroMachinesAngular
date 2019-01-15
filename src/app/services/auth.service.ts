@@ -42,4 +42,8 @@ export class AuthService {
   private setHeader(): HttpHeaders {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
+
+  // isLoggedIn(): boolean{
+
+  // }
 }
