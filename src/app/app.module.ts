@@ -22,6 +22,12 @@ import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { AuthGuard } from './guards/auth.guard';
+import { UserComponent } from './components/user/user.component';
+// import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
     LoginComponent,
     ProductCreateComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    ProductEditComponent,
+    ProductDeleteComponent,
+    WishlistDetailComponent,
+    UserComponent,
+    // WishlistEditComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -45,11 +57,12 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     AuthService,
     ProductsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

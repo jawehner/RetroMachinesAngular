@@ -2,7 +2,66 @@
     flex: 1 1 auto;
 }
 
-.nav-btn {
+ .nav-btn {
     margin-right: 0.5em;
-    background-color: #132584;
+    background-color: rgb(126, 248, 232);
+} 
+.nav-btn::after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+  
+  .nav-btn:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+a {
+    font-size: 1.25em;
+    color: rgb(126,248,232);
+    font-family: 'Righteous', cursive;
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+.mat-toolbar {
+    background: rgba(0,0,0,0.4);
+    
+}
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid rgb(224, 18, 163);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-size: .6em;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: .2em .4em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background:hotpink;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #2ecc71;
 }

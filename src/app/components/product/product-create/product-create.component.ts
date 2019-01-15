@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService} from '../../../service/products.service';
+import { ProductsService} from 'src/app/services/products.service';
 import { FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import { Router} from '@angular/router';
 
@@ -24,14 +24,15 @@ export class ProductCreateComponent implements OnInit {
       Name: new FormControl,
       Type: new FormControl,
       Condition: new FormControl,
-      Year: new FormControl
+      Year: new FormControl,
     })
   }
 
   onSubmit() {
+    console.log(this.productForm.value)
     this._productService.createProduct(this.productForm.value).subscribe(data => {
-      this._router.navigate(['/Products']);
+      console.log(data)
+      this._router.navigate(['/products']);
     })
   }
-
 }

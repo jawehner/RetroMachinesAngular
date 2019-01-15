@@ -1,9 +1,12 @@
 <div style="text-align:center">
-  <h1>
+  <h1 id="welcome" class=header>
     Welcome to {{ title }}!
   </h1>
   <nav>
-      <a routerLink="products">View All Machines</a>
+      <a mat-button routerLink="/products" id="ahome">View All Machines</a>
   </nav>
-  <img width="300" alt="Angular Logo" src="../assets/arcade-32783_960_720.png">
+  <br>
+  <p class="pics" id="picz"><a mat-button routerLink="/products"><img width="500" alt="Arcade1" src="../assets/ASTEROIDS.PNG" style="background-color: rgba(0,0,0,0.0)">
+  <img width="500" alt="Arcade1" src="../assets/TRON.PNG" style="background-color: rgba(0,0,0,0.0)">
+  <img width="500" alt="Angular Logo" src="../assets/LETHAL.PNG" style="background-color: rgba(0,0,0,0.0)"></a></p>
 </div>

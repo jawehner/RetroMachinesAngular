@@ -1,0 +1,15 @@
+<H1>My Wishlist</H1>
+
+<hr>
+<div *ngIf="wishlist">
+  <div>
+    <label for=""></label>
+    <span>{{product.name}}</span>
+  </div>
+    <button mat-button color="primary" routerLink="/products/:id">See Details</button> 
+    <!-- add links to items below -->
+    <button>Remove from Wishlist</button>
+    <button>Contact Seller</button>
+  </div>
+
+<button mat-button color="primary" routerLink="/products">View All Machines</button>
