@@ -42,6 +42,7 @@ import { UserComponent } from './components/user/user.component';
     ProductDeleteComponent,
     WishlistDetailComponent,
     UserComponent,
+
     // WishlistEditComponent,
 
   ],
