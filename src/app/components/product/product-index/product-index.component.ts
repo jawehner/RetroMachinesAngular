@@ -12,7 +12,8 @@ import { JwtHelperService } from '@auth0/angular-jwt'
 
 export class ProductIndexComponent implements OnInit {
 
-  columnNames= ['Name', 'Type', 'Condition', 'Year', 'buttons'];
+    //TODO: Add Column of Seller
+  columnNames= ['Name', 'Type', 'Condition', 'Year', 'Seller', 'buttons'];
   
   dataSource: MatTableDataSource<Product>
   token: any;
@@ -24,12 +25,11 @@ export class ProductIndexComponent implements OnInit {
   ngOnInit() {
     this.token = localStorage.getItem('id_token');
     this.decodedToken = this._jwtHelper.decodeToken(this.token);
-    console.log(this.decodedToken)
     this.userId = this.decodedToken.nameid;
-    console.log(this.userId)
+  
     this._productService.getProducts().subscribe((products: Product[]) => {
+      console.log(products);
       this.dataSource = new MatTableDataSource<Product>(products);
-      console.log(this.dataSource)
     })
     
   }

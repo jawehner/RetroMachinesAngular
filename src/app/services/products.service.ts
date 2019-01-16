@@ -32,7 +32,7 @@ export class ProductsService {
     return this._http.put(`${Api_Url}/Product/${product.productEntityId}`, product, { headers: this.getHeaders() });
   }
 
-  deleteProduct(id: string) {
+  deleteProduct(id: number) {
     return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
