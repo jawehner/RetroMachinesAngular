@@ -27,7 +27,12 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './components/user/user.component';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 // import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
+
+export function getToken(): string {
+  return localStorage.getItem('id_token');
+}
 
 @NgModule({
   declarations: [
@@ -58,11 +63,17 @@ import { UserComponent } from './components/user/user.component';
     MatInputModule,
     MatTableModule,
     AppRoutingModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: getToken
+      }
+    })
   ],
   providers: [
     AuthService,
     ProductsService,
-    AuthGuard
+    AuthGuard,
+    JwtHelperService
   ],
   bootstrap: [AppComponent]
 })
