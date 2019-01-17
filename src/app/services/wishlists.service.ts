@@ -25,4 +25,8 @@ export class WishlistsService {
   updateWishlist(wishlist: Wishlist) {
     return this._http.put(`${Api_Url}/Wishlist`, wishlist, { headers: this.getHeaders() })
   }
+
+  // deleteItemFromWishlist(id: string){
+  //   return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
+  // }
 }
