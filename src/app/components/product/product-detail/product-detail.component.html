@@ -1,5 +1,5 @@
 <h1>Details</h1>
-
+<!--TODO: Add {{product.Seller}}-->
 <hr>
 <div *ngIf="product">
   <!-- <div>
@@ -23,16 +23,17 @@
     <span>{{product.year}}</span>
   </div>
   <div>
-    <label for="">Seller:</label>
-    <span>{{product.userId}}</span>
-  </div>
+      <label for="">Seller:</label>
+      <span>{{product.userName}}</span>
+    </div>
+
 </div>
 
 
 <!-- need to place FormSpree link below  -->
 <button mat-button color="primary" routerLink="/products">Back to List</button>
 <div *ngIf="product.ownerId == userId">
-    <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productId}}">edit</i>
+    <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productEntityId}}">edit</i>
     <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
   </div>
 <!-- <button *ngIf="product" mat-button color="accent" routerLink="/products/edit/{{product.productEntityId}}">Edit</button> -->
