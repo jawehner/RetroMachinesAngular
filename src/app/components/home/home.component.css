@@ -3,9 +3,11 @@
     font-size: 35px;
 	-webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+    color: rgb(255, 255, 255);
+    
 }
 #welcome{
-    color:white;
+    color:rgb(139, 183, 241);
     font-size: 40px;
 	-webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;

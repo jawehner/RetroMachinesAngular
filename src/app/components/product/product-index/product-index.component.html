@@ -32,9 +32,9 @@
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Year</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.year}}</mat-cell>
     </ng-container>
-    <ng-container matColumnDef="Actions">
+    <ng-container matColumnDef="Wishlist">
         <mat-header-cell *matHeaderCellDef class="matColumnSize">  </mat-header-cell>
-        <mat-cell *matCellDef="let product"><button mat-button>Add to Wishlist</button></mat-cell>
+        <mat-cell *matCellDef="let product"><button mat-button (click)="addToWishlist(product.productEntityId)">Add to Wishlist</button></mat-cell>
       </ng-container>
 
     <!-- <ng-container matColumnDef="buttons">
