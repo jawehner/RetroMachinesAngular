@@ -1,7 +1,6 @@
 .example-fill-remaining-space {
     flex: 1 1 auto;
 }
-/* 
  .nav-btn {
     margin-right: 0.5em;
     background-color: rgb(126, 248, 232);
@@ -12,8 +11,23 @@
     top: 50%;
     width: 0;
   }
-  
   .nav-btn:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+ .nav-btn2 {
+    margin-right: 0.5em;
+    background-color: rgb(126, 248, 232);
+} 
+.nav-btn2::after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+  .nav-btn2:hover:after {
     height: 100%;
     left: 0;
     top: 0;
@@ -26,12 +40,9 @@ a {
     text-decoration-color: white;
     text-decoration-line: underline;
 }
-
 .mat-toolbar {
     background: rgba(0,0,0,0.4);
-    
 }
-
 button,
 button::after {
   -webkit-transition: all 0.3s;
@@ -39,7 +50,6 @@ button::after {
   -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-
 button {
   background: none;
   border: 3px solid rgb(224, 18, 163);
@@ -53,7 +63,6 @@ button {
   position: relative;
   text-transform: uppercase;
 }
-
 button::before,
 button::after {
   background:hotpink;
@@ -61,79 +70,4 @@ button::after {
   position: absolute;
   z-index: -1;
 }
-
-button:hover {
-  color: #2ecc71;
-}
-
-.road{
-  position: relative;
-  width: 70%;
-  border-top: 12px dotted black;
-  margin: 150px auto
-} */
-
-.pacman{
-  position: absolute;
-  animation: walk 6s linear infinite;
-}
-.pacman:before, .pacman:after{
-  content: "";
-  display: block;
-  height: 0;
-  width: 0;
-  position: absolute;
-  border: solid 30px yellow;
-  border-radius: 50%;
-  top: -35px;
-}
-.pacman:before{
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  animation: chompTop 0.02s linear infinite alternate;
-}
-
-.pacman::after{
-  border-right-color: transparent;
-  border-top-color: transparent;
-  animation: chompBottom 0.01s linear infinite alternate;
-}
-
-@keyframes walk{
-  0%{
-    left: 0%;
-    transform: scaleX(1)
-  }
-
-  49%{
-    left: 100%;
-    transform: scaleX(1)
-  }
-
-  50%{
-    transform: scaleX(-1)
-  }
-
-  100%{
-    left: 0%;
-    transform: scaleX(-1)
-  }
-}
-
-@keyframes chompTop{
-  0%{
-    transform: rotate(0deg)
-  }
-  100%{
-    transform: rotate(40deg)
-  }
-}
-
-@keyframes chompBottom{
-  0%{
-    transform: rotate(0deg)
-  }
-  100%{
-    transform: rotate(-40deg)
-  }
 }

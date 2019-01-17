@@ -1,4 +1,8 @@
 export interface Wishlist {
-    UserId: number;
     ProductId: number;
+    
+    
+}
+export interface WishlistCreate {
+    productId: number;
 }

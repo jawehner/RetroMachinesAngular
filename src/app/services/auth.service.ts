@@ -32,7 +32,7 @@ export class AuthService {
     return this._http.get(`${Api_Url}/api/Account/UserInfo`, { headers: this.setHeader() });
   }
 
-  logout() {
+  logout() : Observable<Object> {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
