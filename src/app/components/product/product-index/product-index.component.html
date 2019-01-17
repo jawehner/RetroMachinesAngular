@@ -10,57 +10,52 @@
       <mat-header-cell *matHeaderCellDef>Product #</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.productId}}</mat-cell>
     </ng-container>
+
     <ng-container matColumnDef="Name">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Name</mat-header-cell>
       <mat-cell *matCellDef="let product">
         <!-- <i class="material-icons">library_books</i> -->
-      {{product.name}}
-  </mat-cell>
-  </ng-container>
+        {{product.name}}
+      </mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="Type">
-    <mat-header-cell *matHeaderCellDef class="matColumnSize">Type</mat-header-cell>
-    <mat-cell *matCellDef="let product">{{product.type}}</mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="Type">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Type</mat-header-cell>
+      <mat-cell *matCellDef="let product">{{product.type}}</mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="Condition">
+    <ng-container matColumnDef="Condition">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Condition</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.condition}}</mat-cell>
     </ng-container>
 
-  <ng-container matColumnDef="Year">
+    <ng-container matColumnDef="Year">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Year</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.year}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="Wishlist">
         <mat-header-cell *matHeaderCellDef class="matColumnSize">  </mat-header-cell>
         <mat-cell *matCellDef="let product"><button mat-button (click)="addToWishlist(product.productEntityId)">Add to Wishlist</button></mat-cell>
-      </ng-container>
+    </ng-container>
+    <ng-container matColumnDef="Seller">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize">Seller</mat-header-cell>
+        <mat-cell *matCellDef="let product">{{product.userName}}</mat-cell>
+    </ng-container>
 
-    <!-- <ng-container matColumnDef="buttons">
+    <ng-container matColumnDef="Actions">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"> </mat-header-cell>
+      <mat-cell *matCellDef="let product"><button mat-button>Add to Wishlist</button></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
-        <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productId}}">edit</i>
-        <i class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
+        <i mat-icon class="material-icons" routerLink="/products/name/{{product.productEntityId}}">library_books</i>
+        <div *ngIf="product.ownerId == userId">
+          <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productEntityId}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
+        </div>
       </mat-cell>
-    </ng-container> -->
-
-  <ng-container matColumnDef="details">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let product" routerLink="/products/name/{{product.productEntityId}}">
-      <i class="material-icons">library_books</i></mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef='edit'>
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let product" routerLink="/products/edit/{{product.productEntityId}}">
-      <i class="material-icons">edit</i></mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef='delete'>
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let product" routerLink="/products/delete/{{product.productEntityId}}">
-      <i class="material-icons">delete</i></mat-cell>
     </ng-container>
   </mat-table>
 </div>

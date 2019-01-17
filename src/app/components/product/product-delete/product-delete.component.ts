@@ -16,14 +16,15 @@ export class ProductDeleteComponent implements OnInit {
     constructor(private _productService: ProductsService, private _ar: ActivatedRoute, private _router: Router) {
       this._ar.paramMap.subscribe(p => {
         this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
-          this.product =singleProduct;
+          this.product = singleProduct;
         })
       })
     }
     
     onDelete() {
-      this._productService.deleteProduct(this.product.name).subscribe(() => {
+      this._productService.deleteProduct(this.product.productEntityId).subscribe(() => {
         this._router.navigate(['/products']);
+        
       })
     }
     
