@@ -27,6 +27,7 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './components/user/user.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 // import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
@@ -48,6 +49,7 @@ export function getToken(): string {
     ProductDeleteComponent,
     WishlistDetailComponent,
     UserComponent,
+    ContactComponent,
     // WishlistEditComponent,
 
   ],

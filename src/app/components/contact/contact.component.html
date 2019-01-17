@@ -1,0 +1,33 @@
+ <h1 rel="stylesheet">Contact Seller</h1>
+    <br>
+        <form action="https://formspree.io/jawehner@gmail.com" method="POST" class="contact-form">
+          <div>
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Your Name" id="name" required
+                data-validation-required-message="Please enter your name" name="name">
+              <p class="help-block text-danger"></p>
+          </div>
+          <div>
+            <label>Email Address</label>
+              <input type="email" class="form-control" placeholder="Your Email" id="email" required
+                data-validation-required-message="Please enter your email" name="_replyto">
+              <p class="help-block text-danger"></p>
+          </div>
+          <div>
+            <label>Name of Product</label>
+              <input type="email" class="form-control" placeholder="Name of Product" id="email" required
+                data-validation-required-message="Please enter your email" name="_replyto">
+              <p class="help-block text-danger"></p>
+          </div>
+          <div>
+              <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required
+                data-validation-required-message="Please leave a message" name="message"></textarea>
+              <p class="help-block text-danger"></p>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-lg btn-black">
+              <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+              Send Message
+            </button>
+          </div>
+        </form>
