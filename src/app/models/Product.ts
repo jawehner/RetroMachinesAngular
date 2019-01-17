@@ -5,4 +5,5 @@ export interface Product {
     type: string;
     condition: string;
     year: number;
+    userName: string;
 }

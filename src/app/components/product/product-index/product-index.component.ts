@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../../models/Product'
 import { ProductsService } from 'src/app/services/products.service';
 import { MatTableDataSource } from '@angular/material';
+import { JwtHelperService } from '@auth0/angular-jwt'
 import { WishlistsService } from 'src/app/services/wishlists.service'
 import { Wishlist, WishlistCreate } from 'src/app/models/Wishlist';
 import { $ } from 'protractor';
@@ -12,32 +13,33 @@ import { $ } from 'protractor';
   styleUrls: ['./product-index.component.css']
 })
 
-
 export class ProductIndexComponent implements OnInit {
 
-  columnNames= ['Name', 'Type', 'Condition', 'Year', 'details', 'edit', 'delete', 'Wishlist'];
+  columnNames= ['Name', 'Type', 'Condition', 'Year', 'Seller', 'buttons' , 'Wishlist'];
   
   dataSource: MatTableDataSource<Product>
+  token: any;
+  decodedToken: any;
+  userId: any;
   wishlist: Wishlist;
 
-  constructor(private _productService: ProductsService, private _wishListService: WishlistsService) { }
+  constructor(private _productService: ProductsService, private _jwtHelper: JwtHelperService, private _wishListService: WishlistsService) { }
 
   ngOnInit() {
+    this.token = localStorage.getItem('id_token');
+    this.decodedToken = this._jwtHelper.decodeToken(this.token);
+    this.userId = this.decodedToken.nameid;
     this._productService.getProducts().subscribe((products: Product[]) => {
+      console.log(products);
       this.dataSource = new MatTableDataSource<Product>(products);
-      console.log(this.dataSource)
     })
-    
   }
-
 
   createWishList() {
     this._wishListService.createWishlist(this.wishlist).subscribe(data => {
       console.log(data)
-      // this._router.navigate(['/products']);
     })
   }
-
 
   addToWishlist(productId: number){
     var wishlistItem: WishlistCreate = {
@@ -49,6 +51,5 @@ export class ProductIndexComponent implements OnInit {
     }, (error: any) => {
       console.log(error)
     });
-
   }
 }

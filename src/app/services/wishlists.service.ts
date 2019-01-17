@@ -27,11 +27,11 @@ export class WishlistsService {
     return this._http.put(`${Api_Url}/Wishlist`, wishlist, { headers: this.getHeaders() })
   }
 
+  // deleteItemFromWishlist(id: string){
+  //   return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
+  // }
+  
   addItemToWishlist(productId: WishlistCreate){
     return this._http.post(`${Api_Url}/Wishlist`, productId, {headers: this.getHeaders() });
   }
-
-  //  addItemToWishlist(getItem: Product){
-  //   return this.wishlist.push
-  //  }
 }

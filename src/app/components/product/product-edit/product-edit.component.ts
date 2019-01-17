@@ -48,6 +48,7 @@ export class ProductEditComponent implements OnInit {
       type: form.value.Type,
       condition: form.value.Condition,
       year: form.value.Year,
+      userName: form.value.UserName
     };
     console.log(updateProduct)
     this._productService.updateProduct(updateProduct).subscribe(d => {

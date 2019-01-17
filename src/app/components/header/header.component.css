@@ -1,7 +1,6 @@
 .example-fill-remaining-space {
     flex: 1 1 auto;
 }
-
  .nav-btn {
     margin-right: 0.5em;
     background-color: rgb(126, 248, 232);
@@ -12,14 +11,12 @@
     top: 50%;
     width: 0;
   }
-  
   .nav-btn:hover:after {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
   }
-
  .nav-btn2 {
     margin-right: 0.5em;
     background-color: rgb(126, 248, 232);
@@ -30,14 +27,12 @@
     top: 50%;
     width: 0;
   }
-  
   .nav-btn2:hover:after {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
   }
-
 a {
     font-size: 1.25em;
     color: rgb(126,248,232);
@@ -45,12 +40,9 @@ a {
     text-decoration-color: white;
     text-decoration-line: underline;
 }
-
 .mat-toolbar {
     background: rgba(0,0,0,0.4);
-    
 }
-
 button,
 button::after {
   -webkit-transition: all 0.3s;
@@ -58,7 +50,6 @@ button::after {
   -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-
 button {
   background: none;
   border: 3px solid rgb(224, 18, 163);
@@ -72,7 +63,6 @@ button {
   position: relative;
   text-transform: uppercase;
 }
-
 button::before,
 button::after {
   background:hotpink;
@@ -80,7 +70,4 @@ button::after {
   position: absolute;
   z-index: -1;
 }
-
-button:hover {
-  color: #126937;
 }
