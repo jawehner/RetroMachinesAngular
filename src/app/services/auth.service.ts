@@ -4,7 +4,7 @@ import { RegisterUser } from '../models/RegisterUser';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import  { Api_Url } from './api.service';
+import  { Api_Url } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root' 

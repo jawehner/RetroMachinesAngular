@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Product } from '../models/Product';
-import  { Api_Url } from './api.service';
+import  { Api_Url } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'

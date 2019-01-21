@@ -1,6 +1,6 @@
 import { Injectable, Input } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import  { Api_Url } from './api.service';
+import  { Api_Url } from '../../environments/environment.prod';
 import { Wishlist, WishlistCreate } from '../models/Wishlist';
 import { Product } from '../models/Product';
 import { WishlistDetailComponent } from '../components/wishlist/wishlist-detail/wishlist-detail.component';
