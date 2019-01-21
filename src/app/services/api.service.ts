@@ -1,3 +1,3 @@
-const Api_Url = 'https://localhost:44311/api';
+// const Api_Url = 'https://localhost:44311/api';
 
-export { Api_Url };
+// export { Api_Url };
