@@ -29,7 +29,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './components/user/user.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
-// import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
+import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
+import { WishlistCreateComponent } from './components/wishlist/wishlist-create/wishlist-create.component';
 
 export function getToken(): string {
   return localStorage.getItem('id_token');
@@ -50,7 +51,8 @@ export function getToken(): string {
     WishlistDetailComponent,
     UserComponent,
     ContactComponent,
-    // WishlistEditComponent,
+    WishlistEditComponent,
+    WishlistCreateComponent
 
   ],
   imports: [

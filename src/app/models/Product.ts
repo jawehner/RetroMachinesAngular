@@ -6,4 +6,5 @@ export interface Product {
     condition: string;
     year: number;
     userName: string;
+    ownerId?: string;
 }
