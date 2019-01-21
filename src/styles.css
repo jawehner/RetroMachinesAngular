@@ -1,14 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+.box {
+    border: 3px solid rgb(224, 18, 163);
+    border-radius: 3em;
+    width: 250px;
+    margin: auto;
+    padding: 1em;
+    background: rgb(126,248,232);
+}
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Righteous', cursive;
-    color: white;
+    color: rgb(126, 248, 232);
+    text-shadow: black ;
     background: url(../src/assets/NEBULA4.jpg)
-}
-
+};
 img{
     background: black;
     opacity: 0%;
@@ -18,9 +26,46 @@ img{
     background: rgba(0,0,0,0.0)
 }
 
-/* footer{
-    background:black;
-    position: bottom;
-    margin-top: 10em;
-    text-align: center;
-} */
+.nav-btn {
+    margin-right: 0.5em;
+    background-color: rgb(255, 66, 198);
+} 
+.nav-btn::after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+  .nav-btn:hover:after {
+      height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+    button,
+    button::after {
+      -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+button {
+  background: none;
+  border: 3px solid rgb(126, 248, 232);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-size: .6em;
+  font-weight: bolder;
+  margin: 1em auto;
+  padding: .2em .4em;
+  position: relative;
+  text-transform: uppercase;
+}
+button::before,
+button::after {
+  background:rgb(48, 255, 227);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}

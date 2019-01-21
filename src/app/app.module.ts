@@ -5,7 +5,9 @@ import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
          MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule, 
+         MatSnackBar,
+         MatSnackBarModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgModule } from '@angular/core';
@@ -25,7 +27,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
-import { AuthGuard } from './guards/auth.guard';
+// import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './components/user/user.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
@@ -69,12 +71,14 @@ export function getToken(): string {
       config: {
         tokenGetter: getToken
       }
-    })
+    }),
+    MatSnackBarModule,
   ],
+  
   providers: [
     AuthService,
     ProductsService,
-    AuthGuard,
+    // AuthGuard,
     JwtHelperService
   ],
   bootstrap: [AppComponent]
