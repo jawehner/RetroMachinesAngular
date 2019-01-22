@@ -25,8 +25,10 @@
     </div>
   </div>
 </form>
-<button mat-raised-button class="nav-btn" type="submit">Create Product</button>
+<button mat-raised-button class="nav-btn" (click)="openSnackBar(message.value, action.value)" type="submit">Create Product</button>
 <br>
 <br>
 <button mat-raised-button class="nav-btn" routerLink="/products">Back to List</button>
 </section> 
+<input class="snackbar" value="Product Created!" #message>
+<input class="snackbar" value="Continue" #action>

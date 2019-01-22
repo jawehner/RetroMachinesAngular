@@ -69,3 +69,6 @@ button::after {
   position: absolute;
   z-index: -1;
 }
+.snackbar{
+    visibility: hidden;
+}

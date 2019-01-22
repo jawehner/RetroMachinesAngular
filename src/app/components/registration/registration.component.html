@@ -24,9 +24,13 @@
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" type="submit">Register</button>
+  <button mat-raised-button class="nav-btn" (click)="openSnackBar(message.value, action.value)" type="submit">Register</button>
   <br>
   <br>
   <button mat-raised-button class="nav-btn" routerLink="/login">Go to Login</button>
 </form>
 </section>
+<input class="snackbar" value="Thank You For Registering!" #message>
+<input class="snackbar" value="Continue" #action>
+
+

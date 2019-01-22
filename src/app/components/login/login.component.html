@@ -14,8 +14,10 @@
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" type="submit" >Login</button>
+  <button mat-raised-button class="nav-btn" (click)="openSnackBar(message.value, action.value)" type="submit">Login</button>
 </form>
 <br>
 <button mat-raised-button class="nav-btn" routerLink="/register">Register as a new user</button>
 </section>
+<input class="snackbar" value="You Are Now Logged In!" #message>
+<input class="snackbar" value="Continue" #action>
