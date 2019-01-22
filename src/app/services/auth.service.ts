@@ -4,7 +4,7 @@ import { RegisterUser } from '../models/RegisterUser';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import  { Api_Url } from './api.service';
+import  { Api_Url } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root' 
@@ -21,22 +21,34 @@ export class AuthService {
 
   login(loginInfo) {
     return this._http.post(`${Api_Url}/Auth/Login`, loginInfo).subscribe( (token: any) => {
-      console.log(token);
       localStorage.setItem('id_token',token.token);
+      localStorage.setItem('admin', token.admin);
+      console.log(token);
+      this.isLoggedIn.next(true);
+      this._router.navigate(['/home']);
+      window.location.reload();
     });
   }
 
-  currentUser(): Observable<Object> {
-    if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
-
-    return this._http.get(`${Api_Url}/api/Account/UserInfo`, { headers: this.setHeader() });
+  currentUser() :boolean {
+    if(!localStorage.getItem('token')) {return false;}
+    return true;
   }
 
-  logout() : Observable<Object> {
+  isAdminUser(): boolean {
+    if(localStorage.getItem('admin') == "true") {return true;}
+    return false;
+  }
+
+  logout() {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
-    return this._http.post(`${Api_Url}/api/Account/Logout`, {headers: this.setHeader() });
+    const authHeader = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+  
+    this._http.post(`${Api_Url}/api/Account/Logout`, {headers: authHeader});
+    this._router.navigate(['/login'])
+    window.location.reload();
   }
 
   private setHeader(): HttpHeaders {

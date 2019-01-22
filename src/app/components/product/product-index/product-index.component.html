@@ -12,9 +12,7 @@
 
     <ng-container matColumnDef="Name">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Name</mat-header-cell>
-      <mat-cell *matCellDef="let product">
-        {{product.name}}
-      </mat-cell>
+      <mat-cell *matCellDef="let product">{{product.name}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Type">
@@ -39,7 +37,7 @@
     
     <ng-container matColumnDef="Wishlist">
         <mat-header-cell *matHeaderCellDef class="matColumnSize">  </mat-header-cell>
-        <mat-cell *matCellDef="let product"><button mat-button (click)="addToWishlist(product.productEntityId)">Add to Wishlist</button></mat-cell>
+        <mat-cell *matCellDef="let product"><button mat-button (click)="addToWishlist(product.productId)">Add to Wishlist</button></mat-cell>
      </ng-container>
 
     <ng-container matColumnDef="Actions">
@@ -50,10 +48,13 @@
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
-        <i mat-icon class="material-icons" routerLink="/products/name/{{product.productEntityId}}">library_books</i>
-        <div *ngIf="product.ownerId == userId">
-          <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productEntityId}}">edit</i>
-          <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
+        <i mat-icon class="material-icons" routerLink="/products/name/{{product.productId}}">library_books</i>
+        <div *ngIf="product.ownerId == userId || userId == 1">
+          <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productId}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productId}}">delete</i>
+        </div>
+        <div *ngIf="userId == 1">
+            <a href="https://www.youtube.com/watch?v=fBGWtVOKTkM"><i mat-icon class="material-icons">Admin</i></a>
         </div>
       </mat-cell>
     </ng-container>

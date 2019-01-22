@@ -12,8 +12,22 @@ import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/w
 // import { AuthGuard } from './guards/auth.guard';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserComponent } from './components/user/user.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminGuard } from './guards/auth/admin.guard'
 
 const routes: Routes = [
+  { path: 'admin',
+    canActivate: [
+      AuthGuard,
+      AdminGuard
+    ],
+      children: [
+        {
+          path: '',
+          component: AdminComponent
+        }
+      ]
+    },
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
   { path: 'register', component: RegistrationComponent },
@@ -25,11 +39,12 @@ const routes: Routes = [
     {path: 'name/:id', component: ProductDetailComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'delete/:id', component: ProductDeleteComponent},
-    {path: 'edit/:id', component: ProductEditComponent}
+    {path: 'edit/:id', component: ProductEditComponent},
   ]},
   { path: 'user', component: UserComponent},
   { path: 'wishlist', children: [
     {path: '', component: WishlistDetailComponent},
+    {path: 'contact', component: ContactComponent},
   ]},
 ];
 

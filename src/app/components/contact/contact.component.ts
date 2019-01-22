@@ -10,6 +10,8 @@ export class ContactComponent implements OnInit {
 
   constructor(public snackBar: MatSnackBar) { }
 
+
+
   ngOnInit() {
   }
   
