@@ -29,7 +29,9 @@ export class ProductIndexComponent implements OnInit {
     this.token = localStorage.getItem('id_token');
     this.decodedToken = this._jwtHelper.decodeToken(this.token);
     this.userId = this.decodedToken.nameid;
+    
     this._productService.getProducts().subscribe((products: Product[]) => {
+    
       console.log(products);
       this.dataSource = new MatTableDataSource<Product>(products);
     })
@@ -41,10 +43,13 @@ export class ProductIndexComponent implements OnInit {
     })
   }
 
-  addToWishlist(productId: number){
+  addToWishlist(productEntityId: number){
+    console.log(productEntityId);
+
     var wishlistItem: WishlistCreate = {
-      productId : productId,
+      productId : productEntityId,
     }
+
     this._wishListService.addItemToWishlist(wishlistItem).subscribe(data => {
       console.log(data)
       // this._router.navigate(['/products']);
