@@ -24,11 +24,12 @@ const routes: Routes = [
     {path: 'name/:id', component: ProductDetailComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'delete/:id', component: ProductDeleteComponent},
-    {path: 'edit/:id', component: ProductEditComponent}
+    {path: 'edit/:id', component: ProductEditComponent},
   ]},
   { path: 'user', component: UserComponent},
   { path: 'wishlist', children: [
     {path: '', component: WishlistDetailComponent},
+    {path: 'contact', component: ContactComponent},
   ]},
 ];
 
