@@ -1,5 +1,6 @@
 export interface Wishlist {
-    ProductId: number;
+    productId: number;
+    transactionalId: number;
     
     
 }

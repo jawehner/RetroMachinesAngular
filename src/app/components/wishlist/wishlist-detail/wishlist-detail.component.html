@@ -1,15 +1,43 @@
 <H1>My Wishlist</H1>
 
-<hr>
+<!-- <hr>
 <div *ngIf="wishlist">
   <div>
     <label for=""></label>
     <span>{{product.name}}</span>
   </div>
     <button mat-button color="primary" routerLink="/products/:id">See Details</button> 
-    <!-- add links to items below -->
     <button>Remove from Wishlist</button>
     <button>Contact Seller</button>
   </div>
 
-<button mat-button color="primary" routerLink="/products">View All Machines</button>
+<button mat-button color="primary" routerLink="/products">View All Machines</button> -->
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    <ng-container matColumnDef="ProductId">
+      <mat-header-cell *matHeaderCellDef>Product #</mat-header-cell>
+      <mat-cell *matCellDef="let product">{{product.productId}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Name</mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        {{product.name}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Contact Seller">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize">Seller</mat-header-cell>
+        <mat-cell *matCellDef="let product"><a href="/src/app/components/contact/contact.component.html">{{product.userName}}</a></mat-cell>
+        <i mat-icon class="material-icons" id="Contact Seller">Contact Seller</i>
+    </ng-container>
+
+    <ng-container matColumnDef="Remove">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize">Remove From Wishlist</mat-header-cell>
+        <mat-cell *matCellDef="let product"><button mat-button (click)="onDelete(product.transactionalId)">Delete</button></mat-cell>
+     </ng-container>
+  </mat-table>
+</div>
