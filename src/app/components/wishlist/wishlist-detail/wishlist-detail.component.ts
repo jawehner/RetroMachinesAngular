@@ -45,7 +45,7 @@ export class WishlistDetailComponent implements OnInit {
   }
   onDelete(id : number) {
     this._wishlistService.deleteItemFromWishlist(id).subscribe(() => { //it's breaking HERE
-      this._router.navigate(['/wishlist']);
+      // this._router.navigate(['/wishlist']);
       
     })
   }
