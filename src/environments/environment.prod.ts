@@ -5,7 +5,7 @@ switch (window.location.hostname) {
       Api_Url= 'https://retromachinesapi.azurewebsites.net'
       break;
   default:
-      Api_Url= 'http://localhost:44311/api';
+      Api_Url='https://retromachinesapi.azurewebsites.net' ;
 }
 
 export const environment = {
