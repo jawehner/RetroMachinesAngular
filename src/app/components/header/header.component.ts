@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   username: string;
   isLoggedIn: boolean;
+  isAdminUser: boolean;
 
   constructor(public authService: AuthService, private _router: Router) { }
 

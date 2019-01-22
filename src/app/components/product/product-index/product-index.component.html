@@ -50,12 +50,12 @@
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
         <i mat-icon class="material-icons" routerLink="/products/name/{{product.productId}}">library_books</i>
-        <div *ngIf="product.ownerId == userId">
+        <div *ngIf="product.ownerId == userId || userId == 1">
           <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productId}}">edit</i>
           <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productId}}">delete</i>
         </div>
-        <div *ngIf="userName == admin">
-          <i mat-icon class="material-icons" routerLink="https://www.youtube.com/watch?v=fBGWtVOKTkM">Admin Privilages</i>
+        <div *ngIf="userId == 1">
+            <a href="https://www.youtube.com/watch?v=fBGWtVOKTkM"><i mat-icon class="material-icons">Admin</i></a>
         </div>
       </mat-cell>
     </ng-container>
