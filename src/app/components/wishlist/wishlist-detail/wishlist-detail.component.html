@@ -31,7 +31,7 @@
 
     <ng-container matColumnDef="Contact Seller">
         <mat-header-cell *matHeaderCellDef class="matColumnSize">Seller</mat-header-cell>
-        <mat-cell *matCellDef="let product"><a href="/src/app/components/contact/contact.component.html">{{product.userName}}</a></mat-cell>
+        <mat-cell *matCellDef="let product"><a routerLink="wishlist/contact">{{product.userName}}</a></mat-cell>
         <i mat-icon class="material-icons" id="Contact Seller">Contact Seller</i>
     </ng-container>
 
