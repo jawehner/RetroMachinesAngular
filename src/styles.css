@@ -5,17 +5,31 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Righteous', cursive;
-    color: white;
+    color: rgb(0, 0, 0);
     background: url(../src/assets/NEBULA4.jpg)
 }
 
 img{
     background: black;
-    opacity: 0%;
+    
 }
 
 #img1{
     background: rgba(0,0,0,0.0)
+}
+
+.mat-cell{
+    background: rgba(0,0,0,0.0);
+    color: black;
+}
+
+.mat-header-cell {
+    background: rgba(0,0,0,0.0);
+    color: black;
+}
+
+div.mat-form-field-infix-wrapper {
+    color: white;
 }
 
 /* footer{
