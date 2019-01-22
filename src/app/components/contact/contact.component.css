@@ -1,14 +1,3 @@
-/* div {
-    align-content: center;
-    text-align: center;
-    font-size: 90%;
-    font-family: 'Bungee', cursive;
-    color: var(--aqua-green);
-    position: relative;
-    margin: auto;
+.entries {
+    color: rgb(224, 18, 163);
 }
-
-.contact-form {
-    margin: auto;
-    font-size: 1.5em;
-} */
