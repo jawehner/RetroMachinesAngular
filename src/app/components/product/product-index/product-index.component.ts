@@ -29,7 +29,8 @@ export class ProductIndexComponent implements OnInit {
     this.token = localStorage.getItem('id_token');
     this.decodedToken = this._jwtHelper.decodeToken(this.token);
     this.userId = this.decodedToken.nameid;
-    
+    console.log(this.userId)
+    debugger;
     this._productService.getProducts().subscribe((products: Product[]) => {
     
       console.log(products);

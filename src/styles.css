@@ -14,11 +14,18 @@ body, html {
     padding: 0;
     font-family: 'Righteous', cursive;
 
-    color: rgb(126, 248, 232);
+    color: rgb(0, 255, 221);
     text-shadow: black ;
-
-    background: url(../src/assets/NEBULA4.jpg)
+    background: url(../src/assets/abstract-abstraction-background-1044989.jpg);
+    background-size: cover;
+    animation: spin 20 linear infinite;
 };
+
+
+@keyframes spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
 img{
     background: black;
     
