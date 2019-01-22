@@ -1,6 +1,6 @@
 <h1>Create a Product</h1>
 <hr>
-
+<section class="box">
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="productForm">
   <div>
     <div>
@@ -24,7 +24,11 @@
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Product</button>
-</form> 
-
-<a mat-button routerLink="/products">Back to List</a>
+</form>
+<button mat-raised-button class="nav-btn" (click)="openSnackBar(message.value, action.value)" type="submit">Create Product</button>
+<br>
+<br>
+<button mat-raised-button class="nav-btn" routerLink="/products">Back to List</button>
+</section> 
+<input class="snackbar" value="Product Created!" #message>
+<input class="snackbar" value="Continue" #action>

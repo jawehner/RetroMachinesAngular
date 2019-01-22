@@ -5,7 +5,9 @@ import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
          MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule, 
+         MatSnackBar,
+         MatSnackBarModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgModule } from '@angular/core';
@@ -72,8 +74,10 @@ export function getToken(): string {
       config: {
         tokenGetter: getToken
       }
-    })
+    }),
+    MatSnackBarModule,
   ],
+  
   providers: [
     AuthService,
     ProductsService,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup;
 
-  constructor(private _form: FormBuilder, private authService: AuthService, private _router: Router) { 
+  constructor(private _form: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private _router: Router) { 
     this.createForm();
   }
 
@@ -32,5 +33,8 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value)
     this.authService.login(this.loginForm.value);
     this._router.navigate(['/home'])
+  }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, { duration: 5000, });
   }
 }
