@@ -42,8 +42,8 @@ export class ProductEditComponent implements OnInit {
 
   onSubmit(form) {
     const updateProduct: Product = {
-      productEntityId: form.value.ProductEntityId,
-      userId: form.value.UserId,
+      productEntityId: this.product.productEntityId,
+      userId: this.product.userId,
       name: form.value.Name,
       type: form.value.Type,
       condition: form.value.Condition,
