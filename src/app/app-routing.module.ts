@@ -9,7 +9,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
-// import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
