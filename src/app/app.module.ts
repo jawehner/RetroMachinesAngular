@@ -26,11 +26,13 @@ import { ProductEditComponent } from './components/product/product-edit/product-
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/auth/admin.guard'
 import { UserComponent } from './components/user/user.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
-import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 import { WishlistCreateComponent } from './components/wishlist/wishlist-create/wishlist-create.component';
+import { AdminComponent } from './components/admin/admin.component';
+// import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
 export function getToken(): string {
   return localStorage.getItem('id_token');
@@ -51,8 +53,8 @@ export function getToken(): string {
     WishlistDetailComponent,
     UserComponent,
     ContactComponent,
-    WishlistEditComponent,
-    WishlistCreateComponent
+    WishlistCreateComponent,
+    AdminComponent
 
   ],
   imports: [
@@ -77,7 +79,8 @@ export function getToken(): string {
     AuthService,
     ProductsService,
     AuthGuard,
-    JwtHelperService
+    JwtHelperService,
+    AdminGuard
   ],
   bootstrap: [AppComponent]
 })

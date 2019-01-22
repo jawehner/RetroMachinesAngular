@@ -36,7 +36,7 @@ export class WishlistDetailComponent implements OnInit {
     this.userId = this.decodedToken.nameid;
 
     this._activatedRoute.paramMap.subscribe(routeData => {
-      this._wishlistService.getWishlist(this.userId).subscribe((listItem: Product[]) => { //THIS IS WHERE IT BREAKS. THE routeData is scooping air
+      this._wishlistService.getWishlist(this.userId).subscribe((listItem: Product[]) => { 
         this.dataSource = new MatTableDataSource<Product>(listItem)
         console.log(this.dataSource)
         
@@ -44,13 +44,9 @@ export class WishlistDetailComponent implements OnInit {
     });
   }
   onDelete(id : number) {
-    console.log(id)
-    debugger;
     this._wishlistService.deleteItemFromWishlist(id).subscribe(() => { //it's breaking HERE
-      debugger;
-      // this._router.navigate(['/wishlist']);
-      debugger;
-      // trigger refresh ngOniti method
+      this._router.navigate(['/wishlist']);
+      
     })
   }
 
