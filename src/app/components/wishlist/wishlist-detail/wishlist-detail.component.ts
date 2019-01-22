@@ -48,7 +48,7 @@ export class WishlistDetailComponent implements OnInit {
     debugger;
     this._wishlistService.deleteItemFromWishlist(id).subscribe(() => { //it's breaking HERE
       debugger;
-      this._router.navigate(['/wishlist']);
+      // this._router.navigate(['/wishlist']);
       debugger;
       // trigger refresh ngOniti method
     })
