@@ -1,0 +1,9 @@
+#delete{
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
