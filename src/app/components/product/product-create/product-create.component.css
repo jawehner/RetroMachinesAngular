@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(126,248,232);
+    size: 6em;
+}
+mat-form-field{
+    z-index: 1;
+    color: black;
+    text-emphasis: bolder;
+    text-emphasis-color: black;
+}
+
+mat-input{
+    color: pink;
+}
+

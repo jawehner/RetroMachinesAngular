@@ -1,5 +1,6 @@
 <h1>Details</h1>
 <hr>
+<section class="box">
 <div *ngIf="product">
   <div>
     <label for="">name:</label>
@@ -28,4 +29,5 @@
     <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productEntityId}}">edit</i>
     <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
   </div>
+</section>
 <!-- <button *ngIf="product" mat-button color="accent" routerLink="/products/edit/{{product.productEntityId}}">Edit</button> -->

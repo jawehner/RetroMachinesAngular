@@ -1,33 +1,34 @@
  <h1 rel="stylesheet">Contact Seller</h1>
     <br>
-        <form action="https://formspree.io/jawehner@gmail.com" method="POST" class="contact-form">
+    <section class="box">
+        <form action="https://formspree.io/jawehner.com" method="POST">
           <div>
-              <label>Name</label>
-              <input type="text" class="form-control" placeholder="Your Name" id="name" required
+              <label class="entries">Your Name</label>
+              <input type="email" placeholder="Enter Your Name" required
                 data-validation-required-message="Please enter your name" name="name">
               <p class="help-block text-danger"></p>
           </div>
           <div>
-            <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Your Email" id="email" required
-                data-validation-required-message="Please enter your email" name="_replyto">
+            <label class="entries">Email Address</label>
+              <input type="email" placeholder="Enter Your Email" required
+                data-validation-required-message="Please Enter Your Email" name="_replyto">
               <p class="help-block text-danger"></p>
           </div>
           <div>
-            <label>Name of Product</label>
-              <input type="email" class="form-control" placeholder="Name of Product" id="email" required
-                data-validation-required-message="Please enter your email" name="_replyto">
+            <label class="entries">Name of Product</label>
+              <input type="email" placeholder="Enter Name of Product" required
+                data-validation-required-message="Please Name of Product" name="_replyto">
               <p class="help-block text-danger"></p>
           </div>
           <div>
-              <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required
+              <textarea class="form-control" rows="7" placeholder="Enter Your Message" id="message" required
                 data-validation-required-message="Please leave a message" name="message"></textarea>
               <p class="help-block text-danger"></p>
           </div>
           <div>
-            <button type="submit" class="btn btn-lg btn-black">
-              <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+            <button mat-raised-button type="submit" class="nav-btn">
               Send Message
             </button>
           </div>
         </form>
+    </section>

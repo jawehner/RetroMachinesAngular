@@ -4,7 +4,7 @@ import { RegisterUser } from '../models/RegisterUser';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import  { Api_Url } from './api.service';
+import  { Api_Url } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root' 
@@ -54,8 +54,4 @@ export class AuthService {
   private setHeader(): HttpHeaders {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
-
-  // isLoggedIn(): boolean{
-
-  // }
 }
