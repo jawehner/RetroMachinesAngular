@@ -10,6 +10,8 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductDeleteComponent implements OnInit {
   product: Product
+  productEntityId: number
+  productId: number
 
   ngOnInit() {
   }
@@ -21,8 +23,10 @@ export class ProductDeleteComponent implements OnInit {
       })
     }
     
-    onDelete() {
-      this._productService.deleteProduct(this.product.productEntityId).subscribe(() => {
+    onDelete(id : number) {console.log()
+      debugger;
+      this._productService.deleteProduct(id).subscribe(() => {debugger;
+        debugger;
         this._router.navigate(['/products']);
         
       })

@@ -17,6 +17,7 @@ export class ProductIndexComponent implements OnInit {
 
   columnNames= ['Name', 'Type', 'Condition', 'Year', 'Seller', 'buttons' , 'Wishlist'];
   
+  products: Product[];
   dataSource: MatTableDataSource<Product>
   token: any;
   decodedToken: any;

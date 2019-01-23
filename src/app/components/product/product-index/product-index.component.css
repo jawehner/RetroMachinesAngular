@@ -1,0 +1,13 @@
+mat-cell{
+    background: black;
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+mat-header-cell{
+    background: black;
+    color: white;
+}
+
+.mat-raised-button.mat-primary {
+    background: black;
+}

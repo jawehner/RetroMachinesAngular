@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { Product } from 'src/app/models/Product';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { tokenKey } from '@angular/core/src/view';
 
 @Component({
   selector: 'app-product-detail',
@@ -22,8 +23,11 @@ export class ProductDetailComponent implements OnInit {
     this.token = localStorage.getItem('id_token');
     this.decodedToken = this._jwtHelper.decodeToken(this.token);
     this.userId = this.decodedToken.nameid;
+    console.log()
+    debugger;
     this._activatedRoute.paramMap.subscribe(routeData => {
       this._productService.getProduct(routeData.get('id')).subscribe((singleProduct: Product) =>{
+        debugger;
         this.product = singleProduct;
         console.log(this.product)
         // console.log(routeData);

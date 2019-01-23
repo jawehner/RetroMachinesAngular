@@ -29,9 +29,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() { 
+  onSubmit() { debugger;
     console.log(this.loginForm.value)
     this.authService.login(this.loginForm.value);
+    console.log(this.loginForm.value)
+    debugger;
     this._router.navigate(['/home'])
   }
   openSnackBar(message: string, action: string) {

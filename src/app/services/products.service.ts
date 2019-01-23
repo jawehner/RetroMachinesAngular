@@ -28,11 +28,13 @@ export class ProductsService {
     return this._http.get(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 
-  updateProduct(product: Product) {
-    return this._http.put(`${Api_Url}/Product/${product.productEntityId}`, product, { headers: this.getHeaders() });
+  updateProduct(product: Product) { debugger;
+    console.log(product)
+    return this._http.put(`${Api_Url}/Product/${product.productId}`, product, { headers: this.getHeaders() });
+    debugger;
   }
 
-  deleteProduct(id: number) {
+  deleteProduct(id: number) {console.log(id); debugger;
     return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 

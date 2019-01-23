@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit {
     .subscribe( () => this._authService.login(this._registerForm.value));
     this._router.navigate(['/home']);
   }
-  openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, { duration: 5000, });
-  }
+  // openSnackBar(message: string, action: string) {
+  //   this.snackBar.open(message, action, { duration: 5000, });
+  // }
 }
