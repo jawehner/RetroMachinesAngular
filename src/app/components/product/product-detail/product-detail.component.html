@@ -26,8 +26,8 @@
 <!-- need to place FormSpree link below  -->
 <button mat-button color="primary" routerLink="/products">Back to List</button>
 <div *ngIf="product.ownerId == userId">
-    <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productEntityId}}">edit</i>
-    <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productEntityId}}">delete</i>
+    <i mat-icon class="material-icons" routerLink="/products/edit/{{product.productId}}">edit</i>
+    <i mat-icon class="material-icons" routerLink="/products/delete/{{product.productId}}">delete</i>
   </div>
 </section>
 <!-- <button *ngIf="product" mat-button color="accent" routerLink="/products/edit/{{product.productEntityId}}">Edit</button> -->

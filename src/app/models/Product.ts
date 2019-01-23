@@ -7,4 +7,5 @@ export interface Product {
     year: number;
     userName: string;
     ownerId?: string;
+    productId: number;
 }

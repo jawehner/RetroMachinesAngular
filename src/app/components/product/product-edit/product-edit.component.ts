@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductEditComponent implements OnInit {
 
   product: Product;
+  productEntityId: number;
   
   editProductForm: FormGroup;
   constructor(private _form: FormBuilder,
@@ -32,7 +33,7 @@ export class ProductEditComponent implements OnInit {
 
   createForm() {
     this.editProductForm = this._form.group({
-      ProductEntityId: new FormControl(this.product.productEntityId),
+      ProductId: new FormControl(this.product.productId),
       Name: new FormControl(this.product.name),
       Type: new FormControl(this.product.type),
       Condition: new FormControl(this.product.condition),
@@ -40,15 +41,15 @@ export class ProductEditComponent implements OnInit {
     });
   }
 
-  onSubmit(form) {
+  onSubmit(form) {console.log(form)
     const updateProduct: Product = {
-      productEntityId: this.product.productEntityId,
-      userId: this.product.userId,
+      productId: form.value.ProductId,
+      userId: form.value.UserId,
       name: form.value.Name,
       type: form.value.Type,
       condition: form.value.Condition,
       year: form.value.Year,
-      userName: form.value.UserName
+      userName: form.value.UserName,
     };
     console.log(updateProduct)
     this._productService.updateProduct(updateProduct).subscribe(d => {

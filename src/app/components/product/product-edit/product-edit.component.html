@@ -5,8 +5,8 @@
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editProductForm">
     <div hidden>
       <mat-form-field>
-        <input matInput placeholder="ProductEntityId" formControlName="ProductEntityId" type="ProductEntityId" required
-          [value]="product.productEntityId" />
+        <input matInput placeholder="ProductId" formControlName="ProductId" type="ProductId" required
+          [value]="product.productId" />
       </mat-form-field>
     </div>
     <div>

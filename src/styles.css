@@ -8,6 +8,7 @@
     margin: auto;
     padding: 1em;
     background: rgb(126,248,232);
+    color: black;
 }
 body, html {
     margin: 0;
@@ -71,3 +72,4 @@ button::after {
 .snackbar{
     visibility: hidden;
 }
+

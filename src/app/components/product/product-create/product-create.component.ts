@@ -34,6 +34,7 @@ export class ProductCreateComponent implements OnInit {
     this._productService.createProduct(this.productForm.value).subscribe(data => {
       console.log(data)
       this._router.navigate(['/products']);
+      console.log(data);
     })
   }
   openSnackBar(message: string, action: string) {

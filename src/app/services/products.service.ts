@@ -29,10 +29,11 @@ export class ProductsService {
   }
 
   updateProduct(product: Product) {
-    return this._http.put(`${Api_Url}/Product/${product.productEntityId}`, product, { headers: this.getHeaders() });
+    console.log(product)
+    return this._http.put(`${Api_Url}/Product/${product.productId}`, product, { headers: this.getHeaders() });
   }
 
-  deleteProduct(id: number) {
+  deleteProduct(id: number) {console.log(id);
     return this._http.delete(`${Api_Url}/Product/${id}`, {headers: this.getHeaders() });
   }
 

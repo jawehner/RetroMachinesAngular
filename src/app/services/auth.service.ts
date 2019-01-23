@@ -5,6 +5,7 @@ import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import  { Api_Url } from '../../environments/environment.prod';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root' 
@@ -13,10 +14,15 @@ export class AuthService {
   userInfo: Token;
   isLoggedIn = new Subject<boolean>();
 
-  constructor( private _http: HttpClient, private _router: Router ) { }
+  constructor( private _http: HttpClient, private _router: Router, private _jwtHelperService: JwtHelperService) { }
 
   register(regUserData: RegisterUser) {
     return this._http.post(`${Api_Url}/Auth/Register`, regUserData);
+  }
+
+  loggedIn() {
+    const token = localStorage.getItem('token');
+    return !this._jwtHelperService.isTokenExpired(token);
   }
 
   login(loginInfo) {

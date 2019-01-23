@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
@@ -31,14 +32,17 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminGuard } from './guards/auth/admin.guard'
 import { UserComponent } from './components/user/user.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 import { WishlistCreateComponent } from './components/wishlist/wishlist-create/wishlist-create.component';
 import { AdminComponent } from './components/admin/admin.component';
  import { WishlistEditComponent } from './components/wishlist/wishlist-edit/wishlist-edit.component';
 
-export function getToken(): string {
-  return localStorage.getItem('id_token');
-}
+ export function tokenGetter() {
+  return localStorage.getItem('token');
+ }
+
+// export function getToken(): string {
+//   return localStorage.getItem('id_token');
+// }
 
 @NgModule({
   declarations: [
@@ -74,7 +78,7 @@ export function getToken(): string {
     AppRoutingModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: getToken
+        tokenGetter: tokenGetter
       }
     }),
     MatSnackBarModule,
